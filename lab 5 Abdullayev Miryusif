@@ -1,0 +1,22 @@
+import random
+n = 10
+numbers = []
+for i in range(n):
+    numbers.append(random.randint(5, 54))
+
+divisible_by_5 = []
+for num in numbers:
+    if num % 5 == 0:
+        divisible_by_5.append(num)
+
+if divisible_by_5:
+    total = 0
+    count = 0
+    for num in divisible_by_5:
+        total += num
+        count += 1
+    average = total / count
+    print(f"5-ə tam bölünən ədədlər: {divisible_by_5}")
+    print(f"Ədədi ortası: {average}")
+else:
+    print("5-ə tam bölünən heç bir ədəd tapılmadı.")
